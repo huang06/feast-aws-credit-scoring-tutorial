@@ -15,7 +15,7 @@ zipcode_features = FeatureView(
     name="zipcode_features",
     entities=["zipcode"],
     ttl=timedelta(days=3650),
-    features=[
+    schema=[
         Feature(name="city", dtype=ValueType.STRING),
         Feature(name="state", dtype=ValueType.STRING),
         Feature(name="location_type", dtype=ValueType.STRING),
@@ -42,7 +42,7 @@ credit_history = FeatureView(
     name="credit_history",
     entities=["dob_ssn"],
     ttl=timedelta(days=90),
-    features=[
+    schema=[
         Feature(name="credit_card_due", dtype=ValueType.INT64),
         Feature(name="mortgage_due", dtype=ValueType.INT64),
         Feature(name="student_loan_due", dtype=ValueType.INT64),
